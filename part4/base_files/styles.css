@@ -125,3 +125,52 @@ main {
 .details-button:hover {
     background-color: #e04e53;
 }
+
+/* PLACE DETAILS */
+.place-details {
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.place-info h1 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.place-info p {
+    color: #717171;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* REVIEWS SECTION */
+#reviews {
+    margin: 20px;
+}
+
+#reviews h2 {
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+.review-card {
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.review-card p {
+    color: #717171;
+    margin-bottom: 4px;
+}
+
+/* ADD REVIEW SECTION */
+.add-review h2 {
+    margin: 20px;
+    color: #333333;
+}
