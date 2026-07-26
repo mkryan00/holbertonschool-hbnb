@@ -18,11 +18,19 @@
         <section id="filter">
             <label for="price-filter">Max Price:</label>
             <select id="price-filter">
-                <!-- Options will be populated dynamically -->
+                <option value="all">All</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+                <option value="200">$200</option>
             </select>
         </section>
+        
         <section id="places-list">
-            <!-- List of places will be populated dynamically -->
+            <div class="place-card">
+                <h3>Sample Place</h3>
+                <p>Price per night: $100</p>
+                <a href="place.html" class="details-button">View Details</a>
+            </div>
         </section>
     </main>
     <script src="scripts.js"></script>
