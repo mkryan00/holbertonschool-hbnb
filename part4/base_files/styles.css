@@ -1,18 +1,19 @@
 /* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
+ Import Roboto from Google Fonts
 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto' Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 header {
