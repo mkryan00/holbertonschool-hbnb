@@ -77,3 +77,35 @@ async function fetchPlaces(token) {
         alert('Failed to fetch places: ' + response.statusText);
     }
 }
+
+function displayPlaces(places) {
+    const placesList = document.getElementById('places-list');
+    placesList.innerHTML = '';
+
+    places.forEach(place => {
+        const placeCard = document.createElement('div');
+        placeCard.classList.add('place-card');
+        placeCard.dataset.price = place.price;
+        placeCard.innerHTML = `
+            <h3>${place.title}</h3>
+            <p>Price per night: $${place.price}</p>
+            <a href="place.html?id=${place.id}" class="details-button">View Details</a>
+        `;
+        placesList.appendChild(placeCard);
+    });
+}
+
+document.getElementById('price-filter').addEventListener('change', (event) => {
+    const selectedPrice = event.target.value;
+    const placeCards = document.querySelectorAll('.place-card');
+
+    placeCards.forEach(card => {
+        const cardPrice = parseFloat(card.dataset.price);
+
+        if (selectedPrice === 'all' || cardPrice <= parseFloat(selectedPrice)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
