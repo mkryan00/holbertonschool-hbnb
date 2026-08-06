@@ -60,3 +60,20 @@ function getCookie(name) {
     }
     return null;
 }
+
+async function fetchPlaces(token) {
+    const response = await fetch('http://127.0.0.1:5000/api/v1/places/', {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    });
+    
+    if (response.ok) {
+        const places = await response.json();
+        displayPlaces(places);
+    } else {
+        alert('Failed to fetch places: ' + response.statusText);
+    }
+}
