@@ -36,3 +36,26 @@ async function loginUser(email, password) {
         alert('Login failed: ' + response.statusText);
     }
 }
+
+function checkAuthentication() {
+    const token = getCookie('token');
+    const loginLink = document.getElementById('login-link');
+
+    if (!token) {
+        loginLink.style.display = 'block';
+    } else {
+        loginLink.style.display = 'none';
+        // Fetch places data if the user is authenticated
+        fetchPlaces(token);
+    }
+}
+function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+        cookie = cookie.trim();
+        if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1);
+        }
+    }
+    return null;
+}
