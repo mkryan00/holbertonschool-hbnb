@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             await loginUser(email, password);
         });
     }
+
 });
 
 async function loginUser(email, password) {
